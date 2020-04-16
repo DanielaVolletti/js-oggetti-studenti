@@ -56,6 +56,10 @@ $(document).ready(function(){
   // aggiungo un nuovo studente
   studenti.push(nuovoStudente);
 
+  // handlebars
+  var source = $('#entry-template').html();
+  var template = Handlebars.compile(source);
+
   // -Ciclare su tutti gli studenti e stampare per ognuno nome e cognome;
   for (var i = 0; i < studenti.length; i++) {
     // console.log(studenti[i]);
@@ -63,6 +67,9 @@ $(document).ready(function(){
     var nomeStudente = studenteNum.nome;
     var cognomeStudente = studenteNum.cognome;
     console.log('nome studente ' + nomeStudente + ' cognome studente ' + cognomeStudente);
+    var context = {"nomeStu": nomeStudente, "cognomeStu": cognomeStudente};
+    var html = template(context);
+    $('.elenco-studenti').append(html);
   };
 
 })

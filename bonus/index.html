@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gestione anagrafica studenti</title>
+  </head>
+  <body>
+    <div id="sfondo-pag">
+      <div class="elenco-studenti">
+        <h1>ELENCO STUDENTI</h1>
+      </div>
+    </div>
+
+    <!-- template -->
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="blocco-studente">
+        <span class="nome"> <span class= "dati"> Nome: </span> {{nomeStu}}</span>
+        <span class="cognome"> <span class= "dati"> Cognome: </span> {{cognomeStu}}</span>
+      </div>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
